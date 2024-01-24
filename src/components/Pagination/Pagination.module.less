@@ -1,0 +1,54 @@
+.pagination {
+  margin: 2rem 0;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+  }
+  &__button {
+    width: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem 1rem;
+    border-radius: 6px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    &:disabled {
+      background-color: grey;
+      cursor: not-allowed;
+      svg {
+        fill: rgb(92, 92, 92);
+      }
+    }
+    &:hover:disabled {
+      background-color: grey;
+      cursor: not-allowed;
+      svg {
+        fill: rgb(92, 92, 92);
+      }
+    }
+    &:hover {
+      background-color: #ffcc01;
+      color: #2c61ad;
+      svg {
+        transition: .3s;
+        fill: #2c61ad;
+      }
+    }
+  }
+  &__button--active {
+    background-color: #2c61ad;
+    color: #ffcc01;
+  }
+  &__button--arrow {
+    width: 2.8rem;
+    padding: .4rem 0;
+    svg {
+      fill: #242424;
+    }
+  }
+}
